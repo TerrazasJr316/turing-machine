@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Máquina de Turing - Multiplicación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Multiplicación con Máquina de Turing</h1>
+
+    <h4>Reglas</h4>
+    <p>Multiplicacion solo de dos numeros en numeracion unitaria.</p>
+    <p>Cabezal empieza en el primer elemento en el estado J.</p>
+    <p>No se desborda en ningun momento y hacia la derecha se agregan elemento si es necesario para la operacion.</p>
+
+    <div class="input-container">
+        <label for="input1">Ingrese el primer número (en 1s):</label>
+        <input type="text" id="input1" pattern="[1]+" required>
+    </div>
+    <div class="input-container">
+        <label for="input2">Ingrese el segundo número (en 1s):</label>
+        <input type="text" id="input2" pattern="[1]+" required>
+    </div>
+    <button onclick="iniciarMultiplicacion()">Multiplicar</button>
+
+    <div class="tape-container" id="tape"></div>
+    <img id="arrow" src="src/cabezal.png" class="arrow" style="position: absolute; width: 50px; transition: all 0.5s ease;">
+    <div id="transitionMessage" class="transition-message"></div> <!-- Mensaje de transición -->
+
+    <div class="tape-container" id="tape"></div>
+    <!--<img id="arrow" src="src/cabezal.png" class="arrow"
+        style="position: absolute; width: 50px; transition: all 0.5s ease;"> -->
+
+    <script src="script.js"></script>
+   
+
+</body>
+
+</html>
